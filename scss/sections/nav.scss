@@ -1,0 +1,80 @@
+header {
+    position: fixed;
+    right: 0;
+    overflow: visible;
+    background-color: transparent;
+    z-index: 999;
+
+    li.nav-link {
+        display: none;
+    }
+
+    nav {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        background-color: $main-black-color;
+        border-radius: 50%;
+        transition: all .5s ease-in;
+    }
+
+    nav.toggled {
+        width: 350px;
+        height: 350px;
+        top: -120px;
+        right: -120px;
+
+        ul {
+            position: absolute;
+            bottom: 50px;
+            left: 70px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        li:nth-of-type(2) {
+            animation: navLinkSwing .5s .3s  ease-in forwards;
+        }
+        li:nth-of-type(3) {
+            animation: navLinkSwing .5s .5s ease-in forwards;
+        }
+        li:nth-of-type(4) {
+            animation: navLinkSwing .5s .7s ease-in forwards;
+        }
+        li.nav-link {
+            transform: translateX(200px);
+            margin-top: 10px;
+            display: block;
+            text-align: left;
+            font-size: 1.3em;
+            font-family: $heading-font;
+
+            a {
+                color: $main-black-color;
+                text-align: left;
+                display: block;
+                padding: 5px;
+                padding-left: 20px;
+                transition: color .4s ease-in;
+
+                &:hover {
+                    color: lighten($main-black-color, 80%)
+                }
+            }
+        }
+
+    }
+
+    .hamburger {
+        color: $main-white-color;
+
+        i {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+}
