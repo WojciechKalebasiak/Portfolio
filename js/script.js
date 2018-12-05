@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "#c849b6",
     "#c84978"
   ];
+  const nav = document.getElementsByTagName("nav")[0];
+  const menuToggler = document.getElementById("menu-toggler");
+  const backdrop = document.getElementById("backdrop");
+  const navLinks = document.getElementsByClassName("nav-link");
+  Array.from(navLinks).forEach(navLink => {
+    navLink.addEventListener("click", closeMenu);
+  });
   function closeMenu() {
     const BackdropAnimation = backdrop.animate(
       [
@@ -22,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     BackdropAnimation.onfinish = () => {
       backdrop.classList.remove("toggled");
     };
-    console.log(BackdropAnimation);
     nav.classList.remove("toggled");
     nav.style.backgroundColor = "#3f3e3e";
     menuToggler.classList.remove("fa-times");
@@ -35,9 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggler.classList.remove("fa-bars");
     menuToggler.classList.add("fa-times");
   }
-  const nav = document.getElementsByTagName("nav")[0];
-  const menuToggler = document.getElementById("menu-toggler");
-  const backdrop = document.getElementById("backdrop");
   menuToggler.addEventListener("click", () => {
     //Close Modal
     if (nav.classList.contains("toggled")) {

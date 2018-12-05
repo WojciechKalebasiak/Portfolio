@@ -3,7 +3,15 @@
     background-attachment: fixed;
     animation: bgcTravel 60s ease-in infinite;
     height: 100vh;
-    padding-top: 80%;
+    padding-top: 60%;
+
+    @include mq('xsLandscape') {
+        padding-top: 25%;
+    }
+
+    @include mq('smLandscape') {
+        padding-top: 25%;
+    }
 
     .heading {
         font-family: $heading-font;

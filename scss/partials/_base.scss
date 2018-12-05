@@ -34,6 +34,7 @@ a {
 
 * {
     box-sizing: border-box;
+    font-family: $main-font;
 }
 
 .wrapper {
@@ -44,7 +45,18 @@ a {
 body {
     line-height: 1;
 }
-
+.section-heading, .section-subheading {
+    font-family: $heading-font;
+    text-align: center;
+}
+.section-heading {
+    color:$main-black-color;
+    font-size: 2.5em;
+}
+.section-subheading {
+    margin-top: 2%;
+    color: lighten($main-black-color, 15%);
+}
 ul,
 ol {
     list-style: none;
