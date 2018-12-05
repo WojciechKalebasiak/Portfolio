@@ -26,7 +26,7 @@
         background: linear-gradient(235deg, #73cbb4, #4c59d8, #845793);
         background-size: 600% 600%;
         color: transparent;
-        animation: gradientSwing 20s ease-in infinite, arrowPop 1.5s ease-in-out infinite;
+        animation: gradientSwing 20s ease-in infinite, arrowPop .66s ease-in-out alternate infinite;
         background-clip: text;
         -webkit-background-clip: text;
         margin-top: 5vh;
