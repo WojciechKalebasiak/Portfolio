@@ -1,12 +1,23 @@
 #backdrop {
     position: fixed;
-    opacity: 0;
+    display: none;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: transparent;
     z-index: 90;
-    transition: opacity .3s ease-in;
 }
+
 #backdrop.toggled {
-    opacity: 0.6;
+    display: block;
+    animation: backdropFade .5s ease-in forwards;
+}
+@keyframes backdropFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .8;
+        background-color: black;
+    }
 }
