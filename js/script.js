@@ -15,6 +15,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggler = document.getElementById("menu-toggler");
   const backdrop = document.getElementById("backdrop");
   const navLinks = document.getElementsByClassName("nav-link");
+  const prevButton = document.getElementById("prevButton");
+  const nextButton = document.getElementById("nextButton");
+  const slide = document.getElementById("slide");
+  const projects = document.getElementsByClassName("project");
+
+  let counter = 1;
+  slide.style.transform = `translateX(${-100 * counter}%)`;
+  nextButton.addEventListener("click", () => {
+    if (counter >= 7) {
+      return;
+    }
+    counter++;
+    slide.style.transition = "transform .3s ease-in";
+    slide.style.transform = `translateX(${-100 * counter}%)`;
+  });
+  prevButton.addEventListener("click", () => {
+    if (counter <= 0) {
+      return;
+    }
+    counter--;
+    slide.style.transition = "transform .3s ease-in";
+    slide.style.transform = `translateX(${-100 * counter}%)`;
+  });
+  slide.addEventListener("transitionend", () => {
+    if (projects[counter].id === "fristClone") {
+      counter = 1;
+      slide.style.transition = "none";
+      slide.style.transform = `translateX(${-100 * counter}%)`;
+    }
+    if (projects[counter].id === "lastClone") {
+      counter = projects.length - 2;
+      slide.style.transition = "none";
+      slide.style.transform = `translateX(${-100 * counter}%)`;
+    }
+  });
   Array.from(navLinks).forEach(navLink => {
     navLink.addEventListener("click", closeMenu);
   });
