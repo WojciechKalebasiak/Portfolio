@@ -262,7 +262,7 @@ header .hamburger i {
 }
 
 #jumbotron {
-  background: url("../../images/jumbotron.jpg") center/cover no-repeat;
+  background: url("/src/images/jumbotron.jpg") center/cover no-repeat;
   background-attachment: fixed;
   animation: bgcTravel 60s ease-in infinite;
   height: 100vh;
@@ -864,27 +864,27 @@ header .hamburger i {
 }
 
 #projects .take {
-  background: url("/images/projects/take.jpg");
+  background: url("/src/images/projects/take.jpg");
 }
 
 #projects .golden {
-  background: url("/images/projects/golden.jpg");
+  background: url("/src/images/projects/golden.jpg");
 }
 
 #projects .sudoku {
-  background: url("/images/projects/sudoku.jpg");
+  background: url("/src/images/projects/sudoku.jpg");
 }
 
 #projects .jquerychatio {
-  background: url("/images/projects/jquerychatio.jpg");
+  background: url("/src/images/projects/jquerychatio.jpg");
 }
 
 #projects .fyb {
-  background: url("/images/projects/fyb.jpg");
+  background: url("/src/images/projects/fyb.jpg");
 }
 
 #projects .devconnector {
-  background: url("/images/projects/devconnector.jpg");
+  background: url("/src/images/projects/devconnector.jpg");
 }
 
 #projects .project {
