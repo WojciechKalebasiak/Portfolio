@@ -28,6 +28,11 @@
             @content;
         }
     }
+    @else if($breakpoint=='xlgLandscape') {
+        @media (min-width: map-get($breakpoints, 'xlg')) and (orientation: landscape) {
+            @content;
+        }
+    }
 
     @else if($breakpoint=='xsxs') {
         @media (max-width: map-get($breakpoints, 'xs')) and (max-height:map-get($breakpoints, 'xs')) {

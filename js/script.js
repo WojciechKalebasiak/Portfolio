@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "#c849b6",
     "#c84978"
   ];
+  const jumbotronArrow = document.getElementById("jumbotronArrow");
   const nav = document.getElementsByTagName("nav")[0];
   const menuToggler = document.getElementById("menu-toggler");
   const backdrop = document.getElementById("backdrop");
@@ -19,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.getElementById("nextButton");
   const slide = document.getElementById("slide");
   const projects = document.getElementsByClassName("project");
-
+  const body = document.getElementsByTagName("body")[0];
+  //Carousel
   let counter = 1;
   slide.style.transform = `translateX(${-100 * counter}%)`;
   nextButton.addEventListener("click", () => {
@@ -50,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       slide.style.transform = `translateX(${-100 * counter}%)`;
     }
   });
+  //Navigation
   Array.from(navLinks).forEach(navLink => {
     navLink.addEventListener("click", closeMenu);
   });
@@ -84,6 +87,12 @@ document.addEventListener("DOMContentLoaded", () => {
       openMenu();
     }
   });
+  //SmoothScroll
+  const smoothScroll = () => {
+    const scroll = window.scrollY;
+    console.log(scroll);
+  };
+  window.addEventListener("scroll", smoothScroll);
   backdrop.addEventListener("click", () => {
     if (nav.classList.contains("toggled")) {
       closeMenu();

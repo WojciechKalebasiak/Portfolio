@@ -52,10 +52,22 @@ body {
 .section-heading {
     color:$main-black-color;
     font-size: 2.5em;
+    @include mq('md') {
+        font-size: 4.5em;
+    }
+    @include mq('lgLandscape') {
+        font-size: 4em;
+    }
 }
 .section-subheading {
     margin-top: 2%;
     color: lighten($main-black-color, 15%);
+    @include mq('md') {
+        font-size: 2em;
+    }
+    @include mq('lgLandscape') {
+        font-size: 1.5em;
+    }
 }
 ul,
 ol {

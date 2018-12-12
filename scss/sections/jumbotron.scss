@@ -12,7 +12,18 @@
     @include mq('smLandscape') {
         padding-top: 25%;
     }
-
+    @include mq('mdLandscape') {
+        padding-top: 20%;
+    }
+    @include mq('md') {
+        padding-top: 50%;
+    }
+    @include mq('lgLandscape') {
+        padding-top: 30%;
+    }
+    @include mq('xlgLandscape') {
+        padding-top: 17.5%;
+    }
     .heading {
         font-family: $heading-font;
         text-align: center;
@@ -21,6 +32,12 @@
 
     .name {
         font-size: 2em;
+        @include mq('md') {
+            font-size: 4em;
+        }
+        @include mq('lgLandscape') {
+            font-size: 4em;
+        }
     }
 
     .junior-dev {
@@ -28,6 +45,12 @@
         font-size: 1.5em;
         margin-top: 5vh;
         word-wrap: break-word;
+        @include mq('md') {
+            font-size: 3em;
+        }
+        @include mq('lgLandscape') {
+            font-size: 3em;
+        }
     }
 
     .arrow-down-icon {
@@ -40,6 +63,13 @@
         margin-top: 5vh;
         display: block;
         text-align: center;
+        font-size: 3em;
+        @include mq('md') {
+            font-size: 4em;
+        }
+        @include mq('lgLandscape') {
+            font-size: 4em;
+        }
     }
 
 

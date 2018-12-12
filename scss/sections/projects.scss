@@ -2,15 +2,20 @@
     padding: 0 2.5%;
     padding-top: 15%;
     height: 100vh;
+
     @include mq('xsLandscape') {
-        padding-top: 5%;;
+        padding-top: 5%;
+        ;
     }
+
     @include mq('smLandscape') {
         padding-top: 5%;
     }
+
     @include mq('mdLandscape') {
         padding-top: 3.5%;
     }
+
     .projects-carousel {
         margin: 0 auto;
         margin-top: 20%;
@@ -18,12 +23,25 @@
         width: 100%;
         position: relative;
         overflow: hidden;
+        box-shadow: 5px 5px 3.5px 0px rgba(0, 0, 0, 0.75);
+
         @include mq('xsLandscape') {
             margin-top: 5%;
         }
+
         @include mq('smLandscape') {
             margin-top: 5%;
         }
+
+        @include mq('md') {
+            height: 65vh;
+            margin-top: 15%;
+        }
+        @include mq('mdLandscape') {
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+        }
+
     }
 
     #slide {
@@ -77,19 +95,32 @@
             border-top-right-radius: 5%;
             padding: 5%;
             opacity: 0.9;
+
             @include mq('xsxs') {
                 padding: 3.5%;
             }
+
             @include mq('xsLandscape') {
                 padding: 2.5%;
             }
+
             @include mq('smLandscape') {
                 padding: 2.5%;
             }
+
+            @include mq('md') {
+                padding: 5%;
+            }
+
             .project-title,
             .used-technologies {
                 margin-bottom: 2.5%;
+
                 @include mq('xsxs') {
+                    margin-bottom: 1.5%;
+                }
+
+                @include mq('xlgLandscape') {
                     margin-bottom: 1.5%;
                 }
             }
@@ -98,29 +129,52 @@
                 font-size: 1.75em;
                 font-family: $heading-font;
                 color: wheat;
+
                 @include mq('xsxs') {
                     font-size: 1.25em;
                 }
+
                 @include mq('xsLandscape') {
                     font-size: 1em;
                 }
+
                 @include mq('smLandscape') {
                     font-size: 1em;
+                }
+
+                @include mq('md') {
+                    font-size: 2.5em;
+                }
+
+                @include mq('lgLandscape') {
+                    font-size: 2em;
                 }
             }
 
             .used-technologies {
                 font-size: 1.25em;
                 color: wheat;
+
                 @include mq('xsxs') {
                     font-size: 1em;
                 }
+
                 @include mq('xsLandscape') {
                     font-size: 0.9em;
                 }
+
                 @include mq('smLandscape') {
                     font-size: .9em;
                 }
+
+                @include mq('md') {
+                    font-size: 2em;
+                }
+
+                @include mq('lgLandscape') {
+                    font-size: 1.75em;
+                }
+
                 span {
                     color: $main-white-color;
                 }
@@ -140,15 +194,19 @@
                 span.react {
                     color: #00D8FF;
                 }
+
                 span.node-js {
                     color: #6cc24a;
                 }
+
                 span.express {
                     color: #6F6F6F;
                 }
+
                 span.mongodb {
                     color: #589636;
                 }
+
                 span.redux {
                     color: #764ABC;
                 }
@@ -156,13 +214,28 @@
 
             .project-description {
                 margin-bottom: 5%;
+
                 @include mq('xsLandscape') {
                     font-size: .8em;
                     margin-bottom: 2.5%;
                 }
+
                 @include mq('smLandscape') {
                     font-size: .8em;
                     margin-bottom: 2.5%;
+                }
+
+                @include mq('md') {
+                    font-size: 1.75em;
+
+                }
+
+                @include mq('lgLandscape') {
+                    font-size: 1.5em;
+                }
+
+                @include mq('xlgLandscape') {
+                    margin-bottom: 1.75%;
                 }
             }
 
@@ -178,29 +251,50 @@
                     border-radius: 15%;
                     transition: all .4s ease-in;
                     font-family: $heading-font;
+
                     @include mq('xsxs') {
                         padding: 1.5%;
                     }
+
                     @include mq('xsLandscape') {
                         padding: 1%;
                     }
+
                     @include mq('smLandscape') {
                         padding: 1%;
                     }
-                    &:hover {
-                        background-color: darken(#57b59d, 10%);
-                        color: $main-white-color;
+
+                    @include mq('md') {
+                        padding: 2%;
+                        font-size: 1.2em;
                     }
+
+                    @include mq('lgLandscape') {
+                        padding: 1.5%;
+
+                        &:hover {
+                            background-color: darken(#57b59d, 10%);
+                            color: $main-white-color;
+                        }
+                    }
+
                 }
 
                 i {
                     color: $main-white-color;
                     transition: color .3s ease-in;
-                    @include mq('xsxs') {
-                        transform: scale(0.75);
+                    font-size: 2em;
+
+                    @include mq('md') {
+                        font-size: 4em;
                     }
-                    &:hover {
-                        color: darken(#57b59d, 10%);
+
+                    @include mq('lgLandscape') {
+                        font-size: 4em;
+
+                        &:hover {
+                            color: darken(#57b59d, 10%);
+                        }
                     }
                 }
             }
@@ -214,38 +308,73 @@
         color: black;
         opacity: 0.7;
         transition: opacity .2s ease-in;
+        font-size: 2em;
+
         @include mq('xsxs') {
             top: 20%;
         }
+
         @include mq('xsLandscape') {
             top: 5%;
         }
+
         @include mq('smLandscape') {
             top: 5%;
         }
-        &:focus {
-            opacity: 0.8;
+
+        @include mq('md') {
+            font-size: 4em;
         }
+
+        @include mq('lgLandscape') {
+            font-size: 4em;
+            opacity: 0.2;
+            transition: opacity .3s ease-in;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
     }
 
     #nextButton {
         right: 5px;
+
         @include mq('xsLandscape') {
             right: 10px;
         }
+
         @include mq('smLandscape') {
             right: 10px;
+        }
+
+        @include mq('md') {
+            right: 20px;
+        }
+
+        @include mq('lgLandscape') {
+            right: 20px;
         }
     }
 
     #prevButton {
         left: 5px;
+
         @include mq('xsLandscape') {
             left: 10px;
         }
+
         @include mq('smLandscape') {
             left: 10px;
         }
-    }
 
+        @include mq('md') {
+            left: 20px;
+        }
+
+        @include mq('lgLandscape') {
+            left: 20px;
+        }
+    }
 }
