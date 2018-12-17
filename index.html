@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous" />
   <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="stylesheet" href="src/css/onpagescroll.css">
 </head>
 
 <body>
@@ -18,14 +19,14 @@
         <li class="hamburger">
           <i class="fas fa-2x fa-bars" id="menu-toggler"></i>
         </li>
-        <li class="nav-link"><a href="#about-me">O mnie</a></li>
-        <li class="nav-link"><a href="#tech">Technologie</a></li>
-        <li class="nav-link"><a href="#projects">Projekty</a></li>
+        <li class="nav-link"><a>O mnie</a></li>
+        <li class="nav-link"><a>Technologie</a></li>
+        <li class="nav-link"><a>Projekty</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <div id="backdrop"></div>
+  <div id="backdrop"></div>
+  <main class="main">
       <section id="jumbotron">
         <div class="wrapper">
           <div class="heading">
@@ -241,6 +242,7 @@
       </div>
     </section>
   </main>
+  <script src="src/js/onepagescroll.js"></script>
   <script src="src/js/script.js"></script>
 </body>
 

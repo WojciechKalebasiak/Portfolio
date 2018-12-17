@@ -57,6 +57,7 @@
       width: 33.3%;
       display: inline-block;
       height: 33.3%;
+      opacity: 0;
       @include mq("xsLandscape") {
         width: 25%;
         height: 25%;

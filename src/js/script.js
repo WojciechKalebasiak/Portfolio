@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.getElementById("nextButton");
   const slide = document.getElementById("slide");
   const projects = document.getElementsByClassName("project");
-  const body = document.getElementsByTagName("body")[0];
   //Carousel
   let counter = 1;
   slide.style.transform = `translateX(${-100 * counter}%)`;
@@ -52,9 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
       slide.style.transform = `translateX(${-100 * counter}%)`;
     }
   });
+
   //Navigation
-  Array.from(navLinks).forEach(navLink => {
-    navLink.addEventListener("click", closeMenu);
+  for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", () => {
+      moveTo(".main", i + 2);
+      closeMenu();
+    });
+  }
+  jumbotronArrow.addEventListener("click", () => {
+    moveDown(".main");
   });
   function closeMenu() {
     const BackdropAnimation = backdrop.animate(
@@ -72,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggler.classList.remove("fa-times");
     menuToggler.classList.add("fa-bars");
   }
+
   function openMenu() {
     nav.classList.add("toggled");
     nav.style.backgroundColor = menuColors[Math.floor(Math.random() * 10)];
@@ -87,15 +94,22 @@ document.addEventListener("DOMContentLoaded", () => {
       openMenu();
     }
   });
-  //SmoothScroll
-  const smoothScroll = () => {
-    const scroll = window.scrollY;
-    console.log(scroll);
-  };
-  window.addEventListener("scroll", smoothScroll);
+
   backdrop.addEventListener("click", () => {
     if (nav.classList.contains("toggled")) {
       closeMenu();
     }
+  });
+  const technologies = document.getElementsByClassName("logo-tech-wrapper");
+  let techAlreadyShowed= false;
+  //SmoothScroll
+  onePageScroll(".main", {
+    sectionContainer: "section",
+    animationTime: 500,
+    pagination: false,
+    updateURL: false,
+    loop: true,
+    keyboard: true,
+    responsiveFallback: false,
   });
 });

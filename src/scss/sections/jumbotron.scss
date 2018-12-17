@@ -33,10 +33,10 @@
     .name {
         font-size: 2em;
         @include mq('md') {
-            font-size: 4em;
+            font-size: 3em;
         }
         @include mq('lgLandscape') {
-            font-size: 4em;
+            font-size: 3em;
         }
     }
 
@@ -64,11 +64,14 @@
         display: block;
         text-align: center;
         font-size: 3em;
+        &:hover {
+            cursor: pointer;
+        }
         @include mq('md') {
-            font-size: 4em;
+            font-size: 3em;
         }
         @include mq('lgLandscape') {
-            font-size: 4em;
+            font-size: 3em;
         }
     }
 

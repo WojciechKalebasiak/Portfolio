@@ -249,6 +249,7 @@ header nav.toggled li.nav-link a {
 
 header nav.toggled li.nav-link a:hover {
   color: #fefdfd;
+  cursor: pointer;
 }
 
 header .hamburger {
@@ -259,6 +260,15 @@ header .hamburger i {
   position: fixed;
   top: 15px;
   right: 15px;
+}
+
+#scrollTop {
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  z-index: 50;
+  color: black;
+  font-size: 5em;
 }
 
 #jumbotron {
@@ -317,13 +327,13 @@ header .hamburger i {
 
 @media (min-width: 768px) and (orientation: portrait) {
   #jumbotron .name {
-    font-size: 4em;
+    font-size: 3em;
   }
 }
 
 @media (min-width: 992px) and (orientation: landscape) {
   #jumbotron .name {
-    font-size: 4em;
+    font-size: 3em;
   }
 }
 
@@ -359,15 +369,19 @@ header .hamburger i {
   font-size: 3em;
 }
 
+#jumbotron .arrow-down-icon:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) and (orientation: portrait) {
   #jumbotron .arrow-down-icon {
-    font-size: 4em;
+    font-size: 3em;
   }
 }
 
 @media (min-width: 992px) and (orientation: landscape) {
   #jumbotron .arrow-down-icon {
-    font-size: 4em;
+    font-size: 3em;
   }
 }
 
@@ -477,8 +491,8 @@ header .hamburger i {
 
 @media (min-width: 768px) and (orientation: portrait) {
   #about-me .introduction img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -599,7 +613,13 @@ header .hamburger i {
 
 @media (min-width: 992px) and (orientation: landscape) {
   #about-me .contact {
-    margin-top: 3.5%;
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 1200px) and (orientation: landscape) {
+  #about-me .contact {
+    margin-top: 7.5%;
   }
 }
 
@@ -734,6 +754,7 @@ header .hamburger i {
   width: 33.3%;
   display: inline-block;
   height: 33.3%;
+  opacity: 0;
 }
 
 @media (max-width: 576px) and (orientation: landscape) {
@@ -854,6 +875,7 @@ header .hamburger i {
 @media (min-width: 768px) and (orientation: landscape) {
   #projects .projects-carousel {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 80%;
   }
 }
 

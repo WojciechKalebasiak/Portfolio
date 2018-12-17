@@ -71,8 +71,8 @@
             }
 
             @include mq('md') {
-                width: 350px;
-                height: 350px;
+                width: 300px;
+                height: 300px;
             }
             @include mq('lgLandscape') {
                 width: 300px;
@@ -157,7 +157,10 @@
             margin-top: 15%;
         }
         @include mq('lgLandscape') {
-            margin-top: 3.5%;
+            margin-top: 10%;
+        }
+        @include mq('xlgLandscape') {
+            margin-top: 7.5%;
         }
         @include mq('lg') {
             margin-top: 20%;

@@ -69,7 +69,8 @@ header {
                 transition: color .4s ease-in;
 
                 &:hover {
-                    color: lighten($main-black-color, 80%)
+                    color: lighten($main-black-color, 80%);
+                    cursor: pointer;
                 }
             }
         }
@@ -86,4 +87,15 @@ header {
         }
     }
 
+}
+#scrollTop {
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    z-index: 50;
+    color: black;
+    font-size: 5em;
+    i {
+        
+    }
 }
