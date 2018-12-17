@@ -111,5 +111,14 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     keyboard: true,
     responsiveFallback: false,
+    afterMove: index => {
+      if (index === "3" && !techAlreadyShowed) {
+        for (let i = 0; i < technologies.length; i++) {
+          technologies[i].style.transition = `opacity .4s ease ${300+i*100}ms`
+          technologies[i].style.opacity = 1;
+        }
+        techAlreadyShowed = true;
+      }
+    }
   });
 });
