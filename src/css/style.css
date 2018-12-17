@@ -629,6 +629,10 @@ header .hamburger i {
   }
 }
 
+#about-me .contact a {
+  opacity: 0;
+}
+
 #about-me .social-icn {
   transform: scale(2.2);
 }

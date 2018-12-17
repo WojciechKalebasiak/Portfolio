@@ -101,7 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   const technologies = document.getElementsByClassName("logo-tech-wrapper");
-  let techAlreadyShowed= false;
+  const contactLinks = document.querySelectorAll(".contact a");
+  let techAlreadyShowed = false;
+  let contactAlreadyShowed = false;
   //SmoothScroll
   onePageScroll(".main", {
     sectionContainer: "section",
@@ -112,9 +114,18 @@ document.addEventListener("DOMContentLoaded", () => {
     keyboard: true,
     responsiveFallback: false,
     afterMove: index => {
+      if (index === "2" && !contactAlreadyShowed) {
+        for (let i = 0; i < contactLinks.length; i++) {
+          contactLinks[i].style.transition = `opacity .5s ease ${500 +
+            i * 250}ms`;
+          contactLinks[i].style.opacity = 1;
+        }
+        contactAlreadyShowed = true;
+      }
       if (index === "3" && !techAlreadyShowed) {
         for (let i = 0; i < technologies.length; i++) {
-          technologies[i].style.transition = `opacity .4s ease ${300+i*100}ms`
+          technologies[i].style.transition = `opacity .5s ease ${250 +
+            i * 200}ms`;
           technologies[i].style.opacity = 1;
         }
         techAlreadyShowed = true;

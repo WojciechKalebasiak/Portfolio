@@ -165,6 +165,9 @@
         @include mq('lg') {
             margin-top: 20%;
         }
+        a {
+            opacity: 0;
+        }
     }
 
     .social-icn {
