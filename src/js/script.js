@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     keyboard: true,
     responsiveFallback: false,
     afterMove: index => {
-      if (index === "2" && !contactAlreadyShowed) {
+      if (index == 2 && !contactAlreadyShowed) {
         for (let i = 0; i < contactLinks.length; i++) {
           contactLinks[i].style.transition = `opacity .5s ease ${500 +
             i * 250}ms`;
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         contactAlreadyShowed = true;
       }
-      if (index === "3" && !techAlreadyShowed) {
+      if (index == 3 && !techAlreadyShowed) {
         for (let i = 0; i < technologies.length; i++) {
           technologies[i].style.transition = `opacity .5s ease ${250 +
             i * 200}ms`;
