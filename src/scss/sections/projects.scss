@@ -37,6 +37,7 @@
             height: 65vh;
             margin-top: 15%;
         }
+
         @include mq('mdLandscape') {
             box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
             width: 80%;
@@ -52,7 +53,7 @@
     .take {
         background: url('../images/projects/take.jpg');
     }
- 
+
     .golden {
         background: url('../images/projects/golden.jpg');
     }
@@ -245,45 +246,50 @@
                 align-items: center;
 
                 .prod-link {
-                    padding: 2.5%;
-                    background-color: $main-white-color;
-                    color: $main-black-color;
-                    border-radius: 15%;
-                    transition: all .4s ease-in;
-                    font-family: $heading-font;
-
+                    font-weight: bold;
+                    color: #fff;
+                    cursor: pointer;
+                    background-size: 300% 100%;
+                    text-align: center;
+                    background-image: linear-gradient(90deg, #0ba360, #3cba92, #30dd8a, #2bb673);
+                    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+                    border-radius: 50px;
+                    transition: all .4s ease-in-out;
                     @include mq('xsxs') {
-                        padding: 1.5%;
+                        padding: 2% 10%;
                     }
 
                     @include mq('xsLandscape') {
-                        padding: 1%;
+                        padding: 2% 7.5%;
                     }
-
+                    @include mq('xs') {
+                        padding: 2% 10%;
+                    }
                     @include mq('smLandscape') {
-                        padding: 1%;
+                        padding: 1.5% 5%;
                     }
 
                     @include mq('md') {
-                        padding: 2%;
+                        padding: 2.5% 10%;
                         font-size: 1.2em;
                     }
 
                     @include mq('lgLandscape') {
-                        padding: 1.5%;
-
+                        padding: 1.5% 5%;
                         &:hover {
-                            background-color: darken(#57b59d, 10%);
-                            color: $main-white-color;
+                            background-position: 100% 0;
                         }
                     }
-
                 }
 
                 i {
                     color: $main-white-color;
-                    transition: color .3s ease-in;
+                    transition: all .5s ease-in;
                     font-size: 2em;
+                    background-image: linear-gradient(90deg, darken(#0ba360, 15%), lighten(#3cba92,15%), lighten(#30dd8a, 15%), darken(#2bb673,15%));
+                    background-size: 300% 100%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
 
                     @include mq('md') {
                         font-size: 4em;
@@ -293,7 +299,7 @@
                         font-size: 4em;
 
                         &:hover {
-                            color: darken(#57b59d, 10%);
+                            background-position: 100% 0;
                         }
                     }
                 }
