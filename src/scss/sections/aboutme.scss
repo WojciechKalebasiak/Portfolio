@@ -2,7 +2,7 @@
     height: 100vh;
     padding: 0 5%;
     padding-top: 10%;
-    background: linear-gradient(270deg, #52bea2, #5257be, #a752be);
+    background: linear-gradient(270deg, #a4f3de, #989cef, #e291f8);
     background-size: 600% 600%;
     animation: gradientSwing 30s ease-in infinite;
 
@@ -36,7 +36,6 @@
         margin: 0 auto;
         margin-top: 10%;
         display: block;
-
         @include mq('xsH') {
             margin-top: 15%;
         }
@@ -82,13 +81,15 @@
 
         p {
             font-size: 1.2em;
-
+            line-height: 1.05em;
             @include mq('xsxs') {
                 font-size: 1em;
+                line-height: 1em;
             }
 
             @include mq('xsH') {
                 font-size: 1.3em;
+                line-height: 1.25em;
             }
 
             @include mq('xsLandscape') {
@@ -97,6 +98,7 @@
 
             @include mq('smLandscape') {
                 font-size: 1em;
+                line-height: 1.15em;
             }
 
             @include mq('mdLandscape') {
@@ -105,12 +107,19 @@
 
             @include mq('md') {
                 font-size: 1.85em;
+                line-height: 1.2em;
             }
             @include mq('lgLandscape') {
                 font-size: 1.75em;
+                line-height: 1.25em;
             }
             @include mq('lg') {
                 font-size: 2.25em;
+                line-height: 1.5em;
+            }
+            @include mq('xlgLandscape') {
+                font-size: 1.75em;
+                line-height: 1.25em;
             }
         }
 
@@ -138,7 +147,7 @@
         }
 
         @include mq('xsH') {
-            margin-top: 25%;
+            margin-top: 20%;
         }
 
         @include mq('xsLandscape') {
@@ -154,12 +163,9 @@
         }
 
         @include mq('md') {
-            margin-top: 15%;
-        }
-        @include mq('lgLandscape') {
             margin-top: 10%;
         }
-        @include mq('xlgLandscape') {
+        @include mq('lgLandscape') {
             margin-top: 7.5%;
         }
         @include mq('lg') {
