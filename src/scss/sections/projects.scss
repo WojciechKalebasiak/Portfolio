@@ -23,8 +23,6 @@
         width: 100%;
         position: relative;
         overflow: hidden;
-        box-shadow: 5px 5px 3.5px 0px rgba(0, 0, 0, 0.75);
-
         @include mq('xsLandscape') {
             margin-top: 5%;
         }
@@ -39,7 +37,6 @@
         }
 
         @include mq('mdLandscape') {
-            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
             width: 80%;
         }
 
@@ -95,7 +92,7 @@
             border-top-left-radius: 5%;
             border-top-right-radius: 5%;
             padding: 5%;
-            opacity: 0.9;
+            opacity: 0.7;
 
             @include mq('xsxs') {
                 padding: 3.5%;
@@ -127,41 +124,21 @@
             }
 
             .project-title {
-                font-size: 1.75em;
+                font-size: 1.5em;
                 font-family: $heading-font;
                 color: wheat;
 
                 @include mq('xsxs') {
-                    font-size: 1.25em;
+                    font-size: 1em;
                 }
-
+                @include mq('xs') {
+                    font-size: 1em;
+                }
+                @include mq('xsH') {
+                    font-size: 1.2em;
+                }
                 @include mq('xsLandscape') {
-                    font-size: 1em;
-                }
-
-                @include mq('smLandscape') {
-                    font-size: 1em;
-                }
-
-                @include mq('md') {
-                    font-size: 2.5em;
-                }
-
-                @include mq('lgLandscape') {
-                    font-size: 2em;
-                }
-            }
-
-            .used-technologies {
-                font-size: 1.25em;
-                color: wheat;
-
-                @include mq('xsxs') {
-                    font-size: 1em;
-                }
-
-                @include mq('xsLandscape') {
-                    font-size: 0.9em;
+                    font-size: .75em;
                 }
 
                 @include mq('smLandscape') {
@@ -173,7 +150,37 @@
                 }
 
                 @include mq('lgLandscape') {
-                    font-size: 1.75em;
+                    font-size: 1.25em;
+                }
+            }
+
+            .used-technologies {
+                font-size: 1em;
+                color: wheat;
+
+                @include mq('xsxs') {
+                    font-size: 0.75em;
+                }
+                @include mq('xs') {
+                    font-size: .75em;
+                }
+                @include mq('xsH'){
+                    font-size: 1em;
+                }
+                @include mq('xsLandscape') {
+                    font-size: 0.7em;
+                }
+
+                @include mq('smLandscape') {
+                    font-size: .9em;
+                }
+
+                @include mq('md') {
+                    font-size: 1.5em;
+                }
+
+                @include mq('lgLandscape') {
+                    font-size: 1em;
                 }
 
                 span {
@@ -215,24 +222,32 @@
 
             .project-description {
                 margin-bottom: 5%;
-
+                @include mq('xsxs') {
+                    font-size: .6em;
+                }
+                @include mq('xs') {
+                    font-size: .6em;
+                }
+                @include mq('xsH') {
+                    font-size: .9em;
+                }
                 @include mq('xsLandscape') {
-                    font-size: .8em;
+                    font-size: .75em;
                     margin-bottom: 2.5%;
                 }
 
                 @include mq('smLandscape') {
-                    font-size: .8em;
+                    font-size: .75em;
                     margin-bottom: 2.5%;
                 }
 
                 @include mq('md') {
-                    font-size: 1.75em;
+                    font-size: 1.25em;
 
                 }
 
                 @include mq('lgLandscape') {
-                    font-size: 1.5em;
+                    font-size: 1em;
                 }
 
                 @include mq('xlgLandscape') {
