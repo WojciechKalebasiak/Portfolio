@@ -357,12 +357,8 @@ header .hamburger i {
 }
 
 #jumbotron .arrow-down-icon {
-  background: linear-gradient(235deg, #73cbb4, #4c59d8, #845793);
-  background-size: 600% 600%;
-  color: transparent;
-  animation: gradientSwing 20s ease-in infinite, arrowPop .66s ease-in-out alternate infinite;
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: white;
+  animation: arrowPop .66s ease-in-out alternate infinite;
   margin-top: 5vh;
   display: block;
   text-align: center;
@@ -388,7 +384,7 @@ header .hamburger i {
 #about-me {
   height: 100vh;
   padding: 0 5%;
-  padding-top: 10%;
+  padding-top: 7.5%;
   background: linear-gradient(270deg, #a4f3de, #989cef, #e291f8);
   background-size: 600% 600%;
   animation: gradientSwing 30s ease-in infinite;
@@ -397,6 +393,12 @@ header .hamburger i {
 @media (min-width: 576px) and (orientation: landscape) {
   #about-me {
     padding-top: 3%;
+  }
+}
+
+@media (max-width: 576px) and (orientation: landscape) {
+  #about-me {
+    padding-top: 5%;
   }
 }
 
@@ -470,8 +472,15 @@ header .hamburger i {
 
 @media (max-width: 576px) and (max-height: 576px) {
   #about-me .introduction img {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 576px) and (orientation: landscape) {
+  #about-me .introduction img {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -504,68 +513,70 @@ header .hamburger i {
 }
 
 #about-me .introduction p {
-  font-size: 1.2em;
-  line-height: 1.05em;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 @media (max-width: 576px) and (max-height: 576px) {
   #about-me .introduction p {
-    font-size: 1em;
-    line-height: 1em;
+    font-size: .75em;
+    line-height: 1.5em;
   }
 }
 
 @media (max-width: 576px) and (min-height: 700px) {
   #about-me .introduction p {
-    font-size: 1.3em;
-    line-height: 1.25em;
+    font-size: 1em;
+    line-height: 2em;
   }
 }
 
 @media (max-width: 576px) and (orientation: landscape) {
   #about-me .introduction p {
-    font-size: .8em;
+    font-size: .75em;
+    line-height: 1.35em;
   }
 }
 
 @media (min-width: 576px) and (orientation: landscape) {
   #about-me .introduction p {
-    font-size: 1em;
-    line-height: 1.15em;
+    font-size: .85em;
+    line-height: 1.75em;
   }
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
   #about-me .introduction p {
-    font-size: 1.2em;
+    font-size: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
   #about-me .introduction p {
-    font-size: 1.85em;
-    line-height: 1.2em;
+    font-size: 1.25em;
+    line-height: 2em;
   }
 }
 
 @media (min-width: 992px) and (orientation: landscape) {
   #about-me .introduction p {
-    font-size: 1.75em;
-    line-height: 1.25em;
+    font-size: 1.5em;
+    line-height: 1.75em;
   }
 }
 
 @media (min-width: 992px) and (orientation: portrait) {
   #about-me .introduction p {
-    font-size: 2.25em;
-    line-height: 1.5em;
+    font-size: 2em;
+    line-height: 2em;
   }
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
   #about-me .introduction p {
-    font-size: 1.75em;
-    line-height: 1.25em;
+    font-size: 1.25em;
+    line-height: 2.5em;
   }
 }
 
@@ -581,18 +592,12 @@ header .hamburger i {
 
 #about-me .contact {
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 15%;
   width: 85%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-}
-
-@media (max-width: 576px) and (max-height: 576px) {
-  #about-me .contact {
-    margin-top: 15%;
-  }
 }
 
 @media (max-width: 576px) and (min-height: 700px) {
@@ -621,13 +626,13 @@ header .hamburger i {
 
 @media (min-width: 768px) and (orientation: portrait) {
   #about-me .contact {
-    margin-top: 10%;
+    margin-top: 15%;
   }
 }
 
 @media (min-width: 992px) and (orientation: landscape) {
   #about-me .contact {
-    margin-top: 7.5%;
+    margin-top: 5%;
   }
 }
 
@@ -642,7 +647,7 @@ header .hamburger i {
 }
 
 #about-me .social-icn {
-  transform: scale(2.2);
+  transform: scale(2);
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
@@ -898,7 +903,6 @@ header .hamburger i {
   width: 100%;
   position: relative;
   overflow: hidden;
-  box-shadow: 5px 5px 3.5px 0px rgba(0, 0, 0, 0.75);
 }
 
 @media (max-width: 576px) and (orientation: landscape) {
@@ -922,7 +926,6 @@ header .hamburger i {
 
 @media (min-width: 768px) and (orientation: landscape) {
   #projects .projects-carousel {
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     width: 80%;
   }
 }
@@ -981,7 +984,7 @@ header .hamburger i {
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
   padding: 5%;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 @media (max-width: 576px) and (max-height: 576px) {
@@ -1028,47 +1031,71 @@ header .hamburger i {
 }
 
 #projects .project .description .project-title {
-  font-size: 1.75em;
+  font-size: 1.5em;
   font-family: "Merriweather", serif;
   color: wheat;
 }
 
 @media (max-width: 576px) and (max-height: 576px) {
   #projects .project .description .project-title {
-    font-size: 1.25em;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) and (orientation: portrait) {
+  #projects .project .description .project-title {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) and (min-height: 700px) {
+  #projects .project .description .project-title {
+    font-size: 1.2em;
   }
 }
 
 @media (max-width: 576px) and (orientation: landscape) {
   #projects .project .description .project-title {
-    font-size: 1em;
+    font-size: .75em;
   }
 }
 
 @media (min-width: 576px) and (orientation: landscape) {
   #projects .project .description .project-title {
-    font-size: 1em;
+    font-size: .9em;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
   #projects .project .description .project-title {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 
 @media (min-width: 992px) and (orientation: landscape) {
   #projects .project .description .project-title {
-    font-size: 2em;
+    font-size: 1.25em;
   }
 }
 
 #projects .project .description .used-technologies {
-  font-size: 1.25em;
+  font-size: 1em;
   color: wheat;
 }
 
 @media (max-width: 576px) and (max-height: 576px) {
+  #projects .project .description .used-technologies {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 576px) and (orientation: portrait) {
+  #projects .project .description .used-technologies {
+    font-size: .75em;
+  }
+}
+
+@media (max-width: 576px) and (min-height: 700px) {
   #projects .project .description .used-technologies {
     font-size: 1em;
   }
@@ -1076,7 +1103,7 @@ header .hamburger i {
 
 @media (max-width: 576px) and (orientation: landscape) {
   #projects .project .description .used-technologies {
-    font-size: 0.9em;
+    font-size: 0.7em;
   }
 }
 
@@ -1088,13 +1115,13 @@ header .hamburger i {
 
 @media (min-width: 768px) and (orientation: portrait) {
   #projects .project .description .used-technologies {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
 @media (min-width: 992px) and (orientation: landscape) {
   #projects .project .description .used-technologies {
-    font-size: 1.75em;
+    font-size: 1em;
   }
 }
 
@@ -1138,29 +1165,47 @@ header .hamburger i {
   margin-bottom: 5%;
 }
 
+@media (max-width: 576px) and (max-height: 576px) {
+  #projects .project .description .project-description {
+    font-size: .6em;
+  }
+}
+
+@media (max-width: 576px) and (orientation: portrait) {
+  #projects .project .description .project-description {
+    font-size: .6em;
+  }
+}
+
+@media (max-width: 576px) and (min-height: 700px) {
+  #projects .project .description .project-description {
+    font-size: .9em;
+  }
+}
+
 @media (max-width: 576px) and (orientation: landscape) {
   #projects .project .description .project-description {
-    font-size: .8em;
+    font-size: .75em;
     margin-bottom: 2.5%;
   }
 }
 
 @media (min-width: 576px) and (orientation: landscape) {
   #projects .project .description .project-description {
-    font-size: .8em;
+    font-size: .75em;
     margin-bottom: 2.5%;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
   #projects .project .description .project-description {
-    font-size: 1.75em;
+    font-size: 1.25em;
   }
 }
 
 @media (min-width: 992px) and (orientation: landscape) {
   #projects .project .description .project-description {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 }
 
