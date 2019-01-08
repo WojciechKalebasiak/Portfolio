@@ -50,6 +50,9 @@
         @include mq('smLandscape') {
             margin-top: 5%;
         }
+        @include mq('mdLandscape') {
+            margin-top: 3.5%;
+        }
         img {
             margin-left: 2.5%;
             margin-bottom: 2.5%;

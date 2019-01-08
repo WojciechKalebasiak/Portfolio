@@ -462,6 +462,12 @@ header .hamburger i {
   }
 }
 
+@media (min-width: 768px) and (orientation: landscape) {
+  #about-me .introduction {
+    margin-top: 3.5%;
+  }
+}
+
 #about-me .introduction img {
   margin-left: 2.5%;
   margin-bottom: 2.5%;
